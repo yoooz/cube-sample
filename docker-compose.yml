@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  cube:
+    image: "cubejs/cube"
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./cube:/cube/conf
+  db:
+    image: "mysql"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
