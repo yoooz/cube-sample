@@ -1,0 +1,1 @@
+mysql -uroot -proot --local-infile=1 sample -e "LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/data.csv' INTO TABLE alphabet FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' (name)"
