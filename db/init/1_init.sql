@@ -10,3 +10,11 @@ CREATE TABLE IF NOT EXISTS sample.alphabet(
     `name` VARCHAR(64) NOT NULL,
     PRIMARY KEY (`id`)
 );
+
+CREATE TABLE IF NOT EXISTS sample.task_status_history(
+    `date` DATE NOT NULL,
+    `user` VARCHAR(64) NOT NULL,
+    `task` VARCHAR(64) NOT NULL,
+    `status_type` INT(10) NOT NULL,
+    `time` DATETIME NOT NULL
+);
