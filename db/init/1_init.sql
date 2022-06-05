@@ -18,3 +18,11 @@ CREATE TABLE IF NOT EXISTS sample.task_status_history(
     `status_type` INT(10) NOT NULL,
     `time` DATETIME NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS sample.user_company(
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `paying` CHAR(1) NOT NULL,
+    `city` VARCHAR(64) NOT NULL,
+    `company_name` VARCHAR(64) NOT NULL,
+    PRIMARY KEY (`id`)
+);
