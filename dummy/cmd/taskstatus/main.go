@@ -113,8 +113,8 @@ func getDataPath() string {
 	p, _ := os.Getwd()
 
 	pwd := strings.Split(p, "/")
-	pwd[len(pwd)-1] = "db"
-	pwd = append(pwd, []string{"init", "task.csv"}...)
+	pwd = pwd[0:len(pwd)-3]
+	pwd = append(pwd, []string{"db", "init", "task.csv"}...)
 	return strings.Join(pwd, "/")
 }
 
